@@ -41,8 +41,10 @@ public class Main {
         if (str == null) {
             return false;
         }
+
         final String regex = String.format(
                 "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{%d,}$", minLength
+
         );
         return Pattern.matches(regex, str);
     }
